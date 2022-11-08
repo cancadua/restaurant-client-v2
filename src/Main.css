@@ -1,0 +1,13 @@
+body {
+    display: flex;
+    margin-top: 5rem;
+}
+
+.container {
+    display: flex;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    left: 2rem;
+}
