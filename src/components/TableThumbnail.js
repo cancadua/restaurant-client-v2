@@ -1,6 +1,6 @@
-import "./Table.css"
+import "./TableThumbnail.css"
 
-const Table = (seats) => {
+const TableThumbnail = (seats) => {
     return (
         <button className={'button'}>
             {seats}
@@ -8,4 +8,4 @@ const Table = (seats) => {
     )
 }
 
-export default Table;
+export default TableThumbnail;

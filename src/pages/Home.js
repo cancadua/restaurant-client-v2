@@ -1,6 +1,8 @@
 import {useEffect, useState} from "react";
-import Room from "../components/Room";
+import RoomThumbnail from "../components/RoomThumbnail.js";
 import "./Home.css"
+import Person from "../components/Person";
+import {Link} from "react-router-dom";
 
 export const Home = () => {
 
@@ -29,9 +31,15 @@ export const Home = () => {
             {
                 rooms?.map((room, index) => {
                     return (
-                        <Room key={index} {...room}/>
+                        <RoomThumbnail key={index} {...room}/>
                     )
                 })}
+            <Link to="/addRoom">
+                <button  className={"room"}>
+                    Dodaj nową salę
+                </button>
+            </Link>
+
         </div>
 
     );

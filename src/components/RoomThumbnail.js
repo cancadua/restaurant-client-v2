@@ -1,8 +1,8 @@
-import "./Room.css"
+import "./RoomThumbnail.css"
 import Person from "./Person";
 
 
-const Room = (room) => {
+const RoomThumbnail = (room) => {
     return (
         <button className={"room"}>
             <div>
@@ -22,4 +22,4 @@ const Room = (room) => {
 
 }
 
-export default Room;
+export default RoomThumbnail;

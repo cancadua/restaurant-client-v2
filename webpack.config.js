@@ -7,32 +7,22 @@ const htmlPlugin = new HtmlWebPackPlugin({
 });
 
 module.exports = {
-    entry: "./src/index.js",
     mode: "development",
-    output: {
-        filename: 'main.js',
-        path: path.resolve(__dirname, 'dist'),
-        clean: true
-    },
     module: {
         rules: [{
-            test: /\.js$/,
-            exclude: /node_modules/,
-            use: {
-                loader: "babel-loader"
-            }
-        },
-            {
+                test: /\.js$/,
+                exclude: /node_modules/,
+                use: {
+                    loader: "babel-loader"
+                }
+            }, {
                 test: /\.css$/,
                 use: ["style-loader", "css-loader"]
-            },
-            {
+            }, {
                 test: /\.svg$/,
-                use: [
-                    {
+                use: [{
                         loader: "babel-loader"
-                    },
-                    {
+                    }, {
                         loader: "react-svg-loader",
                         options: {
                             jsx: true // true outputs JSX tags
@@ -58,6 +48,5 @@ module.exports = {
     plugins: [
         new webpack.ProvidePlugin({
             "React": "react",
-        }),
-        htmlPlugin]
+        }), htmlPlugin]
 };
