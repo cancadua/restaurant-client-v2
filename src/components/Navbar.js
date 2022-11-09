@@ -7,12 +7,6 @@ export const Navbar = () => {
             <Link to="/">
                 <button>Start</button>
             </Link>
-            <Link to="/addRoom">
-                <button>Dodaj pomieszczenie</button>
-            </Link>
-            <Link to="/addTable">
-                <button>Dodaj stolik</button>
-            </Link>
             <Link to="/addRoomReservation">
                 <button>Dodaj rezerwację pomieszczenia</button>
             </Link>
