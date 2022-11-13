@@ -6,6 +6,29 @@
     justify-content: center;
     border: black solid 3px;
     margin: 1rem;
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+
+    background-color: silver;
+    background-image:
+            linear-gradient(335deg, #808080 23px, transparent 23px),
+            linear-gradient(155deg, #a0a0a0 23px, transparent 23px),
+            linear-gradient(335deg, #808080 23px, transparent 23px),
+            linear-gradient(155deg, #a0a0a0 23px, transparent 23px);
+    background-size: 58px 58px;
+    background-position: 0 2px, 4px 35px, 29px 31px, 31px 6px;
+}
+
+.bricks {
+    background-color: silver;
+    background-image:
+    linear-gradient(335deg, #808080 23px, transparent 23px),
+    linear-gradient(155deg, #606060 23px, transparent 23px),
+    linear-gradient(335deg, #808080 23px, transparent 23px),
+    linear-gradient(155deg, #606060 23px, transparent 23px);
+    background-size: 58px 58px;
+    background-position: 0px 2px, 4px 35px, 29px 31px, 31px 6px;
 }
 
 .peopleContainer {

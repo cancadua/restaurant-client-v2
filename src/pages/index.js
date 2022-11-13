@@ -1,7 +1,7 @@
 import {Home} from "./Home"
-import {NewRoom} from "./NewRoom"
-import {NewTable} from "./NewTable"
-import {NewRoomReservation} from "./NewRoomReservation"
-import {NewTableReservation} from "./NewTableReservation"
+import {FormRoom} from "./FormRoom"
+import {FormTable} from "./FormTable"
+import {FormRoomReservation} from "./FormRoomReservation"
+import {FormTableReservation} from "./FormTableReservation"
 
-export {Home, NewRoom, NewRoomReservation, NewTableReservation, NewTable}
+export {Home, FormRoom, FormRoomReservation, FormTableReservation, FormTable}

@@ -24,7 +24,7 @@
     transition: color 1s;
 }
 
-.navbar a:hover, a:active, button:hover, button:active {
+.navbar a:hover, .navbar a:active, .navbar button:hover, .navbar button:active {
     text-decoration: none;
     color: #d9e7ff;
 }

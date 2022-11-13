@@ -2,24 +2,14 @@ import "./RoomThumbnail.css"
 import Person from "./Person";
 
 
-const RoomThumbnail = (room) => {
-    return (
+const RoomThumbnail = (room) => (
         <button className={"room"}>
-            <div>
                 Sala numer {room._id}
-            </div>
             <div className={"peopleContainer"}>
-                <span>
-                    {room.max_seats} x
-                </span>
-                <span>
-                    <Person/>
-                </span>
-
+                {room.max_seats} x
+                <Person/>
             </div>
         </button>
-        )
-
-}
+)
 
 export default RoomThumbnail;

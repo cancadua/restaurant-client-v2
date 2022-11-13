@@ -1,8 +1,8 @@
-const getRooms = async () => {
-    await fetch('http://localhost:8080/api/rooms')
-        .then((res) => res.json())
-        .then((res) => {return res})
-}
+const getRooms = async () => (
+    fetch('http://localhost:8080/api/rooms')
+        .then(res => res.json())
+        .then(data => data)
+        .catch(e => console.log(e)))
 
 const addRoom = async (data) => {
 
@@ -31,15 +31,15 @@ const modifyRoom = async (data) => {
         .then(response => response.json())
 }
 
-const deleteRoom = async (id) => {
+const deleteRoom = async (_id) => {
     const requestOptions = {
         method: 'DELETE',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(id)
+        body: JSON.stringify(_id)
     };
 
-    await fetch('http://localhost:8080/api/rooms/{id}', requestOptions)
+    await fetch(`http://localhost:8080/api/rooms/${_id}`, requestOptions)
         .then(response => response.json())
+        .catch(e => console.log(e))
 }
 
 const getTables = async () => {
@@ -48,11 +48,20 @@ const getTables = async () => {
         .then((res) => {return res})
 }
 
-const getRoomTables = async (roomId) => {
-    await fetch('http://localhost:8080/api/tables/{roomId}')
-        .then((res) => res.json())
-        .then((res) => {return res})
-}
+const getTable = async (_id) => (
+    await fetch(`http://localhost:8080/api/table/${_id}`)
+        .then(res => res.json())
+        .then(data => data)
+        .catch(e => console.log(e))
+)
+
+
+const getRoomTables = async (roomId) => (
+     fetch(`http://localhost:8080/api/tables/${roomId}`)
+        .then(res => res.json())
+        .then(data => data)
+        .catch(e => console.log(e))
+)
 
 const addTable = async (data) => {
 
@@ -81,18 +90,16 @@ const modifyTable = async (data) => {
         .then(response => response.json())
 }
 
-const deleteTable = async (id) => {
+const deleteTable = async (_id) => {
     const requestOptions = {
-        method: 'DELETE',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(id)
+        method: 'DELETE'
     };
-
-    await fetch('http://localhost:8080/api/tables/{id}', requestOptions)
+     await fetch(`http://localhost:8080/api/tables/${_id}`, requestOptions)
         .then(response => response.json())
 }
 
 export {
+    getTable,
     getRooms,
     addRoom,
     modifyRoom,

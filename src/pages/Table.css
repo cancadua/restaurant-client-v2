@@ -1,0 +1,29 @@
+.table-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    width: 100%;
+    flex-direction: column;
+}
+
+.table-wrapper .buttons-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    width: 100%;
+    flex-direction: column;
+}
+
+.table-wrapper h1 {
+    margin: 0;
+}
+
+.buttons-wrapper button {
+    border: black solid 0.2rem;
+    border-radius: 1rem;
+    padding: 0.5rem;
+    margin: 0.5rem;
+    width: 12rem;
+}

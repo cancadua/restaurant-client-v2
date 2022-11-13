@@ -1,40 +1,26 @@
 import {useEffect, useState} from "react";
 import RoomThumbnail from "../components/RoomThumbnail.js";
 import "./Home.css"
-import Person from "../components/Person";
 import {Link} from "react-router-dom";
+import {getRooms} from "../api/api";
 
 export const Home = () => {
 
     const [rooms, setRooms] = useState();
-
     useEffect(() => {
-        const dataFetch = async () => {
-            const data = await (
-                await fetch('http://localhost:8080/api/rooms', {
-                    method: 'GET',
-                    headers: {
-                        "Access-Control-Allow-Origin": "*",
-                        "Content-Type": "application/json"
-                    }
-                })
-            ).json();
-            setRooms(data);
-        };
-
-        dataFetch();
+        getRooms().then(data => setRooms(data))
     }, []);
 
     return (
 
         <div className={"container"}>
             {
-                rooms?.map((room, index) => {
-                    return (
+                rooms?.map((room, index) => (
+                    <Link to={`/room/${room._id}`}>
                         <RoomThumbnail key={index} {...room}/>
-                    )
-                })}
-            <Link to="/addRoom">
+                    </Link>
+                ))}
+            <Link to="/formRoom">
                 <button  className={"room"}>
                     Dodaj nową salę
                 </button>

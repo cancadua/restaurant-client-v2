@@ -1,4 +1,4 @@
-export const NewTableReservation = () => {
+export const FormRoomReservation = () => {
     return (
         <>
         </>

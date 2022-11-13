@@ -4,7 +4,7 @@ import Main from "./Main";
 
 const App = () => {
   return (
-        <div className="App">
+        <div className="app">
             <Navbar />
             <Main />
         </div>
