@@ -10,37 +10,34 @@ export const Room = () => {
     const [tables, setTables] = useState();
 
     useEffect(() => {
+        console.log(id)
         getRoomTables(id).then(data => {
             setTables(data)
         })
     }, []);
 
     return (
-
         <div className={"room-wrapper"}>
             <h1>Sala numer {id}</h1>
-            <Link to={`/formRoom`} state={{id}}>
+            <Link to={`/formRoom`} state={id}>
                 <button className={"app-button"}>
                     Usuń salę
                 </button>
             </Link>
             <div className={"container"}>
                 {
-                    tables?.map((table, index) => (
+                    tables?.map(table =>
                         <Link to={`/table/${table._id}`}>
-                            <TableThumbnail key={index} {...table}/>
+                            <TableThumbnail key={table._id} {...table}/>
                         </Link>
-                    ))}
-                <Link to="/formTable">
+                    )}
+                <Link to="/formTable" state={id}>
                     <button className={"table"}>
                         Dodaj nowy stół
                     </button>
                 </Link>
             </div>
-
-
         </div>
-
     );
 }
 

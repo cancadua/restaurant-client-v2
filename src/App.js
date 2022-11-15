@@ -3,12 +3,12 @@ import {Navbar} from "./components/Navbar";
 import Main from "./Main";
 
 const App = () => {
-  return (
+    return (
         <div className="app">
-            <Navbar />
-            <Main />
+            <Navbar/>
+            <Main/>
         </div>
-  );
+    );
 }
 
 export default App;

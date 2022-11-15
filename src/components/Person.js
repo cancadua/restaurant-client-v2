@@ -3,7 +3,7 @@ import "./Person.css"
 
 const Person = () => {
     return (
-        <Customer className={"person"} />
+        <Customer className={"person"}/>
     )
 }
 

@@ -15,20 +15,14 @@ export const Table = () => {
         })
     }, []);
 
-
     return (
         <div className={"table-wrapper"}>
             <h1>Sala numer {table?.room_id}</h1>
             <TableThumbnail {...table}/>
             <div className={"buttons-wrapper"}>
-                <Link to={`/formTable`} state={{table}}>
+                <Link to={`/formTable`} state={{table: {table}}}>
                     <button>
-                        Usuń ten stolik
-                    </button>
-                </Link>
-                <Link to={`/formTable`} state={{table}}>
-                    <button>
-                        Modyfikuj ten stolik
+                        Zmień lub usuń ten stolik
                     </button>
                 </Link>
                 <button>
